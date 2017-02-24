@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="侯航磊">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="我的博客第一篇文章"/>
+  <meta property="og:title" content="使用JSPatch实现iOS客户端热更新"/>
   <meta property="og:description" content="iOS博客" />
   <meta property="og:site_name" content="Hanglei"/>
   <meta property="og:type" content="article" />
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">我的博客第一篇文章</p>
+          <p class="title">使用JSPatch实现iOS客户端热更新</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -100,14 +100,14 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2016-02-20</span>
+            <span class="date">2017-02-24</span>
             <span class="time">10:12:56</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">Under 
 
-<a href="/categories/讨论/">讨论</a>
+<a href="/categories/知识积累/">知识积累</a>
 </span>
           
         </div>
@@ -116,15 +116,34 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/第一篇文章/">#第一篇文章</a>
+<a class="tag" href="/tags/JSPatch/">#JSPatch</a> <a class="tag" href="/tags/Hexo/">#Hexo</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>我的第一个博客<br><a id="more"></a></p>
-<p>欢迎来到我的<a href="https://houhanglei.github.io">博客</a>!这是我的第一篇文章。</p>
+          <p>首先没有JSPatch帐号的去官网注册帐号<a href="http://jspatch.com/Index/reg" target="_blank" rel="external">JSPatch注册入口</a>（可以使用fir.im帐号直接登录）。<br><a id="more"></a></p>
+<p>集成sdk按照文档来就行，很简单。</p>
+<p>登录完成后点击新增APP，填写App名称和AppID（没上线可不填）</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3643442-b114fa37cc115a36.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<p>点击App版本进入发布补丁页，提交补丁</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3643442-e51c236f43fc30ac.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<h3 id="js示例1-—-覆盖类方法的实现"><a href="#js示例1-—-覆盖类方法的实现" class="headerlink" title="js示例1 —- 覆盖类方法的实现"></a><strong><em>js示例1 —- 覆盖类方法的实现</em></strong></h3><p>require(“UIAlertView”);</p>
+<p>defineClass(“JSPatchViewController”, {</p>
+<p>modifyButtonClick: function() {</p>
+<p>var alertView = UIAlertView.alloc().initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(“使用JSPatch修改了类方法”, null, null, “确定”, null, null);</p>
+<p>alertView.show();</p>
+<p>}</p>
+<p>}, {});</p>
+<h3 id="js示例2-—-添加未定义的方法"><a href="#js示例2-—-添加未定义的方法" class="headerlink" title="js示例2 —- 添加未定义的方法"></a><strong><em>js示例2 —- 添加未定义的方法</em></strong></h3><p>defineClass(“JSPatchViewController”, {</p>
+<p>addButtonClick: function() {</p>
+<p>var alertView = UIAlertView.alloc().initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles(“使用JSPatch添加未定义的方法后打印出来的结果”, null, null, “确定”, null, null);</p>
+<p>alertView.show();</p>
+<p>}</p>
+<p>});</p>
+<p>还有很多热更新的方法，大家可以自己去看一下</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3643442-e89165cac5c79bb4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
 
         </div>
       </div>
