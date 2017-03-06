@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Swift," />
+  <meta name="keywords" content="知识库," />
 
 
 
@@ -87,22 +87,28 @@
 
 
 
-<meta name="description" content="swift中是不能使用宏定义语法的，但是因为命名空间的缘故，我们可以给我们的项目添加一个空的Const.swift文件，在其中，我们将原本oc中不需要接受参数的宏，定义成let常量，将需要接受参数的宏定义成函数即可，由于我们的整个项目共享命名空间，我们就可以在项目内的任何地方直接使用Const.swift中定义的这些公共的常量和函数
-1、没有参数的宏//oc中的宏定义
-#define kIOS7">
+<meta name="description" content="打开终端，用cd命令 定位到工程所在的目录1$ cd /../../..
+计算出.h文件有多少行1$ find . -name &quot;*.h&quot; | xargs wc -l
+计算出.m文件有多少行1$ find . -name &quot;*.m&quot; | xargs wc -l
+计算出.swift文件有多少行1$ find . -name &quot;*.Swift&quot; | xargs wc -l
+计算出项目中所有文件有多少行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift中的宏定义">
-<meta property="og:url" content="https://houhanglei.github.io/Swift宏定义/index.html">
+<meta property="og:title" content="统计代码总行数">
+<meta property="og:url" content="https://houhanglei.github.io/统计代码总行数/index.html">
 <meta property="og:site_name" content="侯航磊">
-<meta property="og:description" content="swift中是不能使用宏定义语法的，但是因为命名空间的缘故，我们可以给我们的项目添加一个空的Const.swift文件，在其中，我们将原本oc中不需要接受参数的宏，定义成let常量，将需要接受参数的宏定义成函数即可，由于我们的整个项目共享命名空间，我们就可以在项目内的任何地方直接使用Const.swift中定义的这些公共的常量和函数
-1、没有参数的宏//oc中的宏定义
-#define kIOS7">
-<meta property="og:updated_time" content="2017-03-03T02:19:54.000Z">
+<meta property="og:description" content="打开终端，用cd命令 定位到工程所在的目录1$ cd /../../..
+计算出.h文件有多少行1$ find . -name &quot;*.h&quot; | xargs wc -l
+计算出.m文件有多少行1$ find . -name &quot;*.m&quot; | xargs wc -l
+计算出.swift文件有多少行1$ find . -name &quot;*.Swift&quot; | xargs wc -l
+计算出项目中所有文件有多少行">
+<meta property="og:updated_time" content="2017-03-06T06:27:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift中的宏定义">
-<meta name="twitter:description" content="swift中是不能使用宏定义语法的，但是因为命名空间的缘故，我们可以给我们的项目添加一个空的Const.swift文件，在其中，我们将原本oc中不需要接受参数的宏，定义成let常量，将需要接受参数的宏定义成函数即可，由于我们的整个项目共享命名空间，我们就可以在项目内的任何地方直接使用Const.swift中定义的这些公共的常量和函数
-1、没有参数的宏//oc中的宏定义
-#define kIOS7">
+<meta name="twitter:title" content="统计代码总行数">
+<meta name="twitter:description" content="打开终端，用cd命令 定位到工程所在的目录1$ cd /../../..
+计算出.h文件有多少行1$ find . -name &quot;*.h&quot; | xargs wc -l
+计算出.m文件有多少行1$ find . -name &quot;*.m&quot; | xargs wc -l
+计算出.swift文件有多少行1$ find . -name &quot;*.Swift&quot; | xargs wc -l
+计算出项目中所有文件有多少行">
 
 
 
@@ -130,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://houhanglei.github.io/Swift宏定义/"/>
+  <link rel="canonical" href="https://houhanglei.github.io/统计代码总行数/"/>
 
 
 
 
 
-  <title> Swift中的宏定义 | 侯航磊 </title>
+  <title> 统计代码总行数 | 侯航磊 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +289,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://houhanglei.github.io/Swift宏定义/">
+    <link itemprop="mainEntityOfPage" href="https://houhanglei.github.io/统计代码总行数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hanglei">
@@ -304,7 +310,7 @@
             
             
               
-                Swift中的宏定义
+                统计代码总行数
               
             
           </h1>
@@ -319,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T10:01:32+08:00">
-                2017-03-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-06T14:11:59+08:00">
+                2016-03-06
               </time>
             
 
@@ -342,8 +348,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/知识积累/" itemprop="url" rel="index">
-                    <span itemprop="name">知识积累</span>
+                  <a href="/categories/知识库/" itemprop="url" rel="index">
+                    <span itemprop="name">知识库</span>
                   </a>
                 </span>
 
@@ -360,8 +366,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Swift宏定义/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Swift宏定义/" itemprop="commentCount"></span>
+                <a href="/统计代码总行数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="统计代码总行数/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,17 +393,12 @@
       
 
       
-        <p><strong><em>swift中是不能使用宏定义语法的，但是因为命名空间的缘故，我们可以给我们的项目添加一个空的Const.swift文件，在其中，我们将原本oc中不需要接受参数的宏，定义成let常量，将需要接受参数的宏定义成函数即可，由于我们的整个项目共享命名空间，我们就可以在项目内的任何地方直接使用Const.swift中定义的这些公共的常量和函数</em></strong></p>
-<h3 id="1、没有参数的宏"><a href="#1、没有参数的宏" class="headerlink" title="1、没有参数的宏"></a><strong><em>1、没有参数的宏</em></strong></h3><p>//oc中的宏定义</p>
-<p>#define kIOS7   [UIDevice currentDevice].systemVersion.doubleValue&gt;=7.0 ? 1 :0</p>
-<p>#define kIOS8   [UIDevice currentDevice].systemVersion.doubleValue&gt;=8.0 ? 1 :0</p>
-<p>#define kScreenHeight     [UIScreen mainScreen].bounds.size.height</p>
-<p>#define kScreenWidth      [UIScreen mainScreen].bounds.size.width</p>
-<p>//转换成swift的写法<br>let kIOS7 = Double(UIDevice().systemVersion)&gt;=7.0 ? 1 :0<br>let kIOS8 = Double(UIDevice().systemVersion)&gt;=8.0 ? 1 :0</p>
-<p>let kScreenHeight = UIScreen.mainScreen().bounds.size.height<br>let kScreenWidth = UIScreen.mainScreen().bounds.size.width</p>
-<h3 id="2、接收参数的宏"><a href="#2、接收参数的宏" class="headerlink" title="2、接收参数的宏"></a><strong><em>2、接收参数的宏</em></strong></h3><p>//oc写法</p>
-<p>#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]</p>
-<p>//swift中的写法<br>func RGBCOLOR(r:CGFloat,<em> g:CGFloat,</em> b:CGFloat) -&gt; UIColor<br>{<br>return UIColor(red: (r)/255.0, green: (g)/255.0, blue: (b)/255.0, alpha: 1.0)<br>}</p>
+        <h5 id="打开终端，用cd命令-定位到工程所在的目录"><a href="#打开终端，用cd命令-定位到工程所在的目录" class="headerlink" title="打开终端，用cd命令 定位到工程所在的目录"></a><strong>打开终端，用cd命令 定位到工程所在的目录</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /../../..</div></pre></td></tr></table></figure>
+<h5 id="计算出-h文件有多少行"><a href="#计算出-h文件有多少行" class="headerlink" title="计算出.h文件有多少行"></a><strong>计算出.h文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . -name <span class="string">"*.h"</span> | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
+<h5 id="计算出-m文件有多少行"><a href="#计算出-m文件有多少行" class="headerlink" title="计算出.m文件有多少行"></a><strong>计算出.m文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . -name <span class="string">"*.m"</span> | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
+<h5 id="计算出-swift文件有多少行"><a href="#计算出-swift文件有多少行" class="headerlink" title="计算出.swift文件有多少行"></a><strong>计算出.swift文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . -name <span class="string">"*.Swift"</span> | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
+<h5 id="计算出项目中所有文件有多少行"><a href="#计算出项目中所有文件有多少行" class="headerlink" title="计算出项目中所有文件有多少行"></a><strong>计算出项目中所有文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . <span class="string">"("</span> -name <span class="string">"*.m"</span> -or -name <span class="string">"*.mm"</span> -or -name <span class="string">"*.cpp"</span> -or -name <span class="string">"*.h"</span> -or -name <span class="string">"*.rss"</span> <span class="string">")"</span> -print | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
+<p>最后显示的total前面就是代码总数</p>
 
       
     </div>
@@ -421,7 +422,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Swift/" rel="tag"># Swift</a>
+            <a href="/tags/知识库/" rel="tag"># 知识库</a>
           
         </div>
       
@@ -434,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/JSPatch/" rel="next" title="使用JSPatch实现iOS客户端热更新">
-                <i class="fa fa-chevron-left"></i> 使用JSPatch实现iOS客户端热更新
+              <a href="/hexoTest/" rel="next" title="我的博客第一篇文章">
+                <i class="fa fa-chevron-left"></i> 我的博客第一篇文章
               </a>
             
           </div>
@@ -444,8 +445,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/officeMac破解版/" rel="prev" title="officeMac2016破解版">
-                officeMac2016破解版 <i class="fa fa-chevron-right"></i>
+              <a href="/NewBlog/" rel="prev" title="使用HEXO+Github,搭建属于自己的免费博客">
+                使用HEXO+Github,搭建属于自己的免费博客 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -472,8 +473,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="Swift宏定义/"
-           data-title="Swift中的宏定义" data-url="https://houhanglei.github.io/Swift宏定义/">
+      <div class="ds-thread" data-thread-key="统计代码总行数/"
+           data-title="统计代码总行数" data-url="https://houhanglei.github.io/统计代码总行数/">
       </div>
     
   </div>
@@ -575,7 +576,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、没有参数的宏"><span class="nav-number">1.</span> <span class="nav-text">1、没有参数的宏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、接收参数的宏"><span class="nav-number">2.</span> <span class="nav-text">2、接收参数的宏</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#打开终端，用cd命令-定位到工程所在的目录"><span class="nav-number">1.</span> <span class="nav-text">打开终端，用cd命令 定位到工程所在的目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算出-h文件有多少行"><span class="nav-number">2.</span> <span class="nav-text">计算出.h文件有多少行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算出-m文件有多少行"><span class="nav-number">3.</span> <span class="nav-text">计算出.m文件有多少行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算出-swift文件有多少行"><span class="nav-number">4.</span> <span class="nav-text">计算出.swift文件有多少行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算出项目中所有文件有多少行"><span class="nav-number">5.</span> <span class="nav-text">计算出项目中所有文件有多少行</span></a></li></ol></div>
             
 
           </div>
