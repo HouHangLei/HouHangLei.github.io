@@ -399,9 +399,15 @@
       
         
           
-            <p>在objective-c中,需要在.m文件里定义static变量来表示全局变量,但此static变量只是在编译时候进行初始化,对于static变量,无论定义在方法体里面还是方法体外面其作用域都一样.<br>如果.m文件和方法体里面定义了同名的static 变量，那么方法体里面的实例变量和全局的static变量不会冲突，在方法体内部访问的static变量和全局的static变量是不同的。</p>
-<h3 id="static关键字声明的变量必须放在implementation外面，或者方法中，如果不为它赋值默认为0，它只在程序开机初始化一次。"><a href="#static关键字声明的变量必须放在implementation外面，或者方法中，如果不为它赋值默认为0，它只在程序开机初始化一次。" class="headerlink" title="static关键字声明的变量必须放在implementation外面，或者方法中，如果不为它赋值默认为0，它只在程序开机初始化一次。"></a><strong><strong>static关键字声明的变量必须放在implementation外面，或者方法中，如果不为它赋值默认为0，它只在程序开机初始化一次。</strong></strong></h3>
-          
+          在objective-c中,需要在.m文件里定义static变量来表示全局变量,但此static变量只是在编译时候进行初始化,对于static变量,无论定义在方法体里面还是方法体外面其作用域都一样.如果.m文件和方法体里面定义了同名的static 变量，那么方法体里面的实例变量和全局的static变
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/iOS-static/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -549,11 +555,16 @@
       
         
           
-            <p>Office for Mac下载地址：<a href="https://pan.baidu.com/s/1bUJ8Yi" target="_blank" rel="external">office for mac 2016破解版</a> 密码: hexr</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><strong><em>注意事项</em></strong></h3><p>1、安装完成之后一定要关掉自动更新、自动更新到新版本之后破解就无效了、所以弹出自动更新的时候不要确认、选择手动更新然后关闭就行(就是关闭自动更新)、如果你点错了、已经更新了、解决办法是按步骤重新安装一遍就行、覆盖安装后还是破解成功的、不要再手贱自动更新就行了</p>
-<p>2、激活过程中、如果需要输入系统密码、就输入你登录操作系统时的密码即可、如果系统（特别是macOS Sierra系统）不允许来自该来源的安装、请先到系统偏好设置里“安全与隐私”允许应用程序任何来源</p>
-
-          
+          Office for Mac下载地址：office for mac 2016破解版 密码: hexr
+注意事项1、安装完成之后一定要关掉自动更新、自动更新到新版本之后破解就无效了、所以弹出自动更新的时候不要确认、选择手动更新然后关闭就行(就是关闭自动更新)、如果你点错了、已经更新了、解决办法是按步骤
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/officeMac破解版/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -701,23 +712,15 @@
       
         
           
-            <p><strong><em>swift中是不能使用宏定义语法的，但是因为命名空间的缘故，我们可以给我们的项目添加一个空的Const.swift文件，在其中，我们将原本oc中不需要接受参数的宏，定义成let常量，将需要接受参数的宏定义成函数即可，由于我们的整个项目共享命名空间，我们就可以在项目内的任何地方直接使用Const.swift中定义的这些公共的常量和函数</em></strong></p>
-<h3 id="1、没有参数的宏"><a href="#1、没有参数的宏" class="headerlink" title="1、没有参数的宏"></a><strong><em>1、没有参数的宏</em></strong></h3><p>//oc中的宏定义</p>
-<p>#define kIOS7   [UIDevice currentDevice].systemVersion.doubleValue&gt;=7.0 ? 1 :0</p>
-<p>#define kIOS8   [UIDevice currentDevice].systemVersion.doubleValue&gt;=8.0 ? 1 :0</p>
-<p>#define kScreenHeight     [UIScreen mainScreen].bounds.size.height</p>
-<p>#define kScreenWidth      [UIScreen mainScreen].bounds.size.width</p>
-<p>//转换成swift的写法<br>let kIOS7 = Double(UIDevice().systemVersion)&gt;=7.0 ? 1 :0<br>let kIOS8 = Double(UIDevice().systemVersion)&gt;=8.0 ? 1 :0</p>
-<p>let kScreenHeight = UIScreen.mainScreen().bounds.size.height<br>let kScreenWidth = UIScreen.mainScreen().bounds.size.width</p>
-<h3 id="2、接收参数的宏"><a href="#2、接收参数的宏" class="headerlink" title="2、接收参数的宏"></a><strong><em>2、接收参数的宏</em></strong></h3><p>//oc写法</p>
-<p>#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]</p>
-<p>//swift中的写法<br>func RGBCOLOR(r:CGFloat,<em> g:CGFloat,</em> b:CGFloat) -&gt; UIColor<br>{<br>return UIColor(red: (r)/255.0, green: (g)/255.0, blue: (b)/255.0, alpha: 1.0)<br>}</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=436514312&auto=1&height=66"></iframe>
-
-<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-
-
-          
+          swift中是不能使用宏定义语法的，但是因为命名空间的缘故，我们可以给我们的项目添加一个空的Const.swift文件，在其中，我们将原本oc中不需要接受参数的宏，定义成let常量，将需要接受参数的宏定义成函数即可，由于我们的整个项目共享命名空间，我们就可以在项目内的任何地方直接使用Const.sw
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Swift宏定义/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1328,11 +1331,18 @@
       
         
           
-            <h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图:"></a><strong><strong>效果图:</strong></strong></h3><p><img src="http://upload-images.jianshu.io/upload_images/3643442-e033ad1713827a5b.gif?imageMogr2/auto-orient/strip" alt="地址选择"></p>
-<p>使用方法非常简单，大家可以去下载demo看。github地址：<a href="https://github.com/HouHangLei/AddressTest" target="_blank" rel="external">戳我</a>。喜欢的可以下载源码看一下。</p>
-<p>另外给大家推荐一个录制gif格式的软件LICEcap，下载地址：<a href="http://www.cockos.com/licecap/" target="_blank" rel="external">链接</a></p>
+          效果图:
+使用方法非常简单，大家可以去下载demo看。github地址：戳我。喜欢的可以下载源码看一下。
+另外给大家推荐一个录制gif格式的软件LICEcap，下载地址：链接
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/京东选择地址器/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1480,15 +1490,22 @@
       
         
           
-            <p><strong><strong>实现方式很简单，先利用runtime给分类里的block属性添加set和get方法。</strong></strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/3643442-0f45880f05354ed0.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
-<p><strong><strong>然后在触发的方法里回调block。</strong></strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/3643442-6a4228753f7b7332.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
-<p><strong><strong>最后实现的效果</strong></strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/3643442-bf25ffaa6125257d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
-<p><a href="https://github.com/HouHangLei/AuctionBlock" target="_blank" rel="external">github地址</a></p>
+          实现方式很简单，先利用runtime给分类里的block属性添加set和get方法。
+
+然后在触发的方法里回调block。
+
+最后实现的效果
+
+github地址
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/iOS-invoke/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1636,14 +1653,18 @@
       
         
           
-            <h5 id="打开终端，用cd命令-定位到工程所在的目录"><a href="#打开终端，用cd命令-定位到工程所在的目录" class="headerlink" title="打开终端，用cd命令 定位到工程所在的目录"></a><strong>打开终端，用cd命令 定位到工程所在的目录</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> /../../..</div></pre></td></tr></table></figure>
-<h5 id="计算出-h文件有多少行"><a href="#计算出-h文件有多少行" class="headerlink" title="计算出.h文件有多少行"></a><strong>计算出.h文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . -name <span class="string">"*.h"</span> | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
-<h5 id="计算出-m文件有多少行"><a href="#计算出-m文件有多少行" class="headerlink" title="计算出.m文件有多少行"></a><strong>计算出.m文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . -name <span class="string">"*.m"</span> | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
-<h5 id="计算出-swift文件有多少行"><a href="#计算出-swift文件有多少行" class="headerlink" title="计算出.swift文件有多少行"></a><strong>计算出.swift文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . -name <span class="string">"*.Swift"</span> | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
-<h5 id="计算出项目中所有文件有多少行"><a href="#计算出项目中所有文件有多少行" class="headerlink" title="计算出项目中所有文件有多少行"></a><strong>计算出项目中所有文件有多少行</strong></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ find . <span class="string">"("</span> -name <span class="string">"*.m"</span> -or -name <span class="string">"*.mm"</span> -or -name <span class="string">"*.cpp"</span> -or -name <span class="string">"*.h"</span> -or -name <span class="string">"*.rss"</span> <span class="string">")"</span> -print | xargs wc <span class="_">-l</span></div></pre></td></tr></table></figure>
-<p>最后显示的total前面就是代码总数</p>
-
-          
+          打开终端，用cd命令 定位到工程所在的目录1$ cd /../../..
+计算出.h文件有多少行1$ find . -name "*.h" | xargs wc -l
+计算出.m文件有多少行1$ find . -name "*.m" | xargs wc -l
+计算出.swift文件有多少行1$ f
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/统计代码总行数/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
