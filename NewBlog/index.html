@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="GitHub,Hexo,博客," />
+  <meta name="keywords" content="Hexo,GitHub,博客," />
 
 
 
@@ -380,6 +380,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/NewBlog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -467,9 +477,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
-          
             <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
           
             <a href="/tags/博客/" rel="tag"># 博客</a>
           
@@ -521,6 +531,8 @@
 
           
   <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     
   </div>
 
@@ -799,18 +811,21 @@
 
 
   
-
-
-
-
-
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "8ac01a1a29ce488b9bbb418c4420bfd0",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
 
 
 
 
-
-  
 
 
 
