@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="侯航磊,侯航磊的博客,houhanglei" />
+  <meta name="keywords" content="iOS,解决方案," />
 
 
 
@@ -87,15 +87,19 @@
 
 
 
-<meta name="description" content="iOS博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="侯航磊">
-<meta property="og:url" content="https://houhanglei.github.io/archives/index.html">
+<meta name="description" content="当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。
+解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于SDWebImage加载图片引发的内存大量消耗的解决办法">
+<meta property="og:url" content="https://houhanglei.github.io/SDWebImage-crash/index.html">
 <meta property="og:site_name" content="侯航磊">
-<meta property="og:description" content="iOS博客">
+<meta property="og:description" content="当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。
+解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
+<meta property="og:updated_time" content="2017-04-27T11:01:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="侯航磊">
-<meta name="twitter:description" content="iOS博客">
+<meta name="twitter:title" content="关于SDWebImage加载图片引发的内存大量消耗的解决办法">
+<meta name="twitter:description" content="当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。
+解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://houhanglei.github.io/archives/"/>
+  <link rel="canonical" href="https://houhanglei.github.io/SDWebImage-crash/"/>
 
 
 
 
 
-  <title> 归档 | 侯航磊 </title>
+  <title> 关于SDWebImage加载图片引发的内存大量消耗的解决办法 | 侯航磊 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -164,7 +168,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -288,403 +292,190 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 19 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://houhanglei.github.io/SDWebImage-crash/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hanglei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://upload.jianshu.io/users/upload_avatars/3643442/1eb75421b136.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/2400/h/2400">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="侯航磊">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于SDWebImage加载图片引发的内存大量消耗的解决办法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T18:59:13+08:00">
+                2017-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/知识积累/" itemprop="url" rel="index">
+                    <span itemprop="name">知识积累</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/SDWebImage-crash/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量：
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p>当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a><strong>解决方法：</strong></h2><p>我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当我们把这些地方注释掉后重新运行，内存的增长就恢复正常了。</p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+            <a href="/tags/解决方案/" rel="tag"># 解决方案</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/TypeView/" rel="next" title="模仿腾讯视频首页分类滑动的动画效果">
+                <i class="fa fa-chevron-left"></i> 模仿腾讯视频首页分类滑动的动画效果
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/SDWebImage-crash/" itemprop="url">
-              
-                <span itemprop="name">关于SDWebImage加载图片引发的内存大量消耗的解决办法</span>
-              
-            </a>
-        
-      </h1>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-27T18:59:13+08:00"
-              content="2017-04-27" >
-          04-27
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/TypeView/" itemprop="url">
-              
-                <span itemprop="name">模仿腾讯视频首页分类滑动的动画效果</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-17T16:26:14+08:00"
-              content="2017-04-17" >
-          04-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/删除线无法显示/" itemprop="url">
-              
-                <span itemprop="name">关于iOS 10.3系统无法显示删除线的解决方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-12T14:55:42+08:00"
-              content="2017-04-12" >
-          04-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/codesign-failed/" itemprop="url">
-              
-                <span itemprop="name">证书问题“Command /usr/bin/codesign failed with exit code 1”编译不通过的解决方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-06T17:19:38+08:00"
-              content="2017-04-06" >
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/iOS个人账号升级/" itemprop="url">
-              
-                <span itemprop="name">iOS开发者个人账号升级为公司账号。以及修改开发商公司名为中文</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-05T17:12:26+08:00"
-              content="2017-04-05" >
-          04-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/使用Lantern访问外网/" itemprop="url">
-              
-                <span itemprop="name">使用Lantern访问外网</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-24T10:37:07+08:00"
-              content="2017-03-24" >
-          03-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/property分析/" itemprop="url">
-              
-                <span itemprop="name">property（属性）的作用和类别分析</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-20T15:04:22+08:00"
-              content="2017-03-20" >
-          03-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/Mac破解版PS/" itemprop="url">
-              
-                <span itemprop="name">Mac破解版PS</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-16T13:40:18+08:00"
-              content="2017-03-16" >
-          03-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/iOS-static/" itemprop="url">
-              
-                <span itemprop="name">iOS - static变量的使用总结</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-15T14:58:41+08:00"
-              content="2017-03-15" >
-          03-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/officeMac破解版/" itemprop="url">
-              
-                <span itemprop="name">officeMac2016破解版</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-03T18:12:47+08:00"
-              content="2017-03-03" >
-          03-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    </div>
+  </div>
 
           
           </div>
@@ -692,6 +483,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -711,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://upload.jianshu.io/users/upload_avatars/3643442/1eb75421b136.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/2400/h/2400"
@@ -799,6 +605,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法："><span class="nav-number">1.</span> <span class="nav-text">解决方法：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -914,11 +736,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
