@@ -88,18 +88,18 @@
 
 
 <meta name="description" content="当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。
-解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
+解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有几处调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于SDWebImage加载图片引发的内存大量消耗的解决办法">
 <meta property="og:url" content="https://houhanglei.github.io/SDWebImage-crash/index.html">
 <meta property="og:site_name" content="侯航磊">
 <meta property="og:description" content="当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。
-解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
-<meta property="og:updated_time" content="2017-04-27T11:01:28.000Z">
+解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有几处调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
+<meta property="og:updated_time" content="2017-04-27T11:03:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于SDWebImage加载图片引发的内存大量消耗的解决办法">
 <meta name="twitter:description" content="当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。
-解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
+解决方法：我们全局搜索decodedImageWithImage，发现在SDWebImage中有几处调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当">
 
 
 
@@ -412,7 +412,7 @@
 
       
         <p>当我们使用SDWebImage加载比较大的高清图时，会出现内存占用急剧上升，页面出现卡顿导致程序崩溃的问题。</p>
-<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a><strong>解决方法：</strong></h2><p>我们全局搜索decodedImageWithImage，发现在SDWebImage中有基础调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当我们把这些地方注释掉后重新运行，内存的增长就恢复正常了。</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a><strong>解决方法：</strong></h2><p>我们全局搜索decodedImageWithImage，发现在SDWebImage中有几处调用了这个方法，这个方法的用处是减压缩图片，并将图片存到cache使得之后的加载更加快，效果更加好。但是问题就在于去压缩这个操作，如果传进的图片分辨率特别的高，它的减压缩会消耗大量的内存。当我们把这些地方注释掉后重新运行，内存的增长就恢复正常了。</p>
 
       
     </div>
@@ -460,6 +460,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/iOS-JudgeClassType/" rel="prev" title="iOS中isKindOfClass和isMemberOfClass的区别">
+                iOS中isKindOfClass和isMemberOfClass的区别 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -533,7 +537,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
