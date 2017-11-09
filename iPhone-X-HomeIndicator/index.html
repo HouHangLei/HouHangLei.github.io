@@ -98,7 +98,7 @@
 
 1.隐藏HomeIndicator的方法:12// Controls the application&amp;apos;s preferred home indicator auto-hiding when this view controller is">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3643442-b817a6f2ab971344.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-07T08:48:45.000Z">
+<meta property="og:updated_time" content="2017-11-07T08:54:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iPhone X隐藏HomeIndicator，以及底部手势优先级设置">
 <meta name="twitter:description" content="在iOS 11中，ViewController新增了两个方法，可以隐藏底部黑色横条(官方叫HomeIndicator)，以及避免底部手势冲突的方法。
@@ -404,7 +404,7 @@
         <p><strong>在iOS 11中，ViewController新增了两个方法，可以隐藏底部黑色横条(官方叫HomeIndicator)，以及避免底部手势冲突的方法。</strong></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/3643442-b817a6f2ab971344.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="WechatIMG67.jpeg"></p>
 <h3 id="1-隐藏HomeIndicator的方法"><a href="#1-隐藏HomeIndicator的方法" class="headerlink" title="1.隐藏HomeIndicator的方法:"></a>1.隐藏HomeIndicator的方法:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// Controls the application&apos;s preferred home indicator auto-hiding when this view controller is shown.</div><div class="line">- (BOOL)prefersHomeIndicatorAutoHidden API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(watchos, tvos);</div></pre></td></tr></table></figure>
-<p>返回BOOl类型，返回YES隐藏HomeIndicator，经过测试发现，只要界面有滚动或者切换页面就会重新出现，不操作页面一会会自动消失。主要适用于视频类等长时间不对页面做出交互的应用使用。</p>
+<p>返回BOOl类型，返回YES隐藏HomeIndicator，经过测试发现，只要触摸界面就会重新出现，不操作页面一会会自动消失。主要适用于视频类等长时间不对页面做出交互的应用使用。</p>
 <h3 id="2-设置屏幕边缘系统手势与自带手势的优先级"><a href="#2-设置屏幕边缘系统手势与自带手势的优先级" class="headerlink" title="2.设置屏幕边缘系统手势与自带手势的优先级"></a>2.设置屏幕边缘系统手势与自带手势的优先级</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// Controls the application&apos;s preferred screen edges deferring system gestures when this view controller is shown. Default is UIRectEdgeNone.</div><div class="line"></div><div class="line">- (UIRectEdge)preferredScreenEdgesDeferringSystemGestures API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(watchos, tvos);</div></pre></td></tr></table></figure>
 <p>返回的是一个枚举,控制该应用程序的首选屏幕边缘，在显示该ViewController时推迟系统手势。默认的是UIRectEdgeNone。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">typedef NS_OPTIONS(NSUInteger, UIRectEdge) &#123;</div><div class="line">UIRectEdgeNone   = 0,</div><div class="line">UIRectEdgeTop    = 1 &lt;&lt; 0,</div><div class="line">UIRectEdgeLeft   = 1 &lt;&lt; 1,</div><div class="line">UIRectEdgeBottom = 1 &lt;&lt; 2,</div><div class="line">UIRectEdgeRight  = 1 &lt;&lt; 3,</div><div class="line">UIRectEdgeAll    = UIRectEdgeTop | UIRectEdgeLeft | UIRectEdgeBottom | UIRectEdgeRight</div><div class="line">&#125; NS_ENUM_AVAILABLE_IOS(7_0);</div></pre></td></tr></table></figure>
@@ -455,6 +455,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/WKWebView-JS-Alert/" rel="prev" title="WKWebView不显示JS的alert弹窗的解决办法">
+                WKWebView不显示JS的alert弹窗的解决办法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -528,7 +532,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -546,7 +550,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
