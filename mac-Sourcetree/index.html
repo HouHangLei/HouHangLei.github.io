@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3643442-5e0eaf69a18ab208.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3643442-2c89bce5befc72d2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3643442-ddd1bf363810d044.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-21T05:51:51.000Z">
+<meta property="og:updated_time" content="2017-11-21T06:11:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac中使用Sourcetree配置自己搭建的git服务器">
 <meta name="twitter:description" content="一.配置公钥秘钥1.生成新的公钥注：邮箱是你git地址的邮箱1$ ssh-keygen -t rsa -C &amp;quot;邮箱地址&amp;quot;
@@ -438,7 +438,14 @@
 <h1 id="三-遇到的问题"><a href="#三-遇到的问题" class="headerlink" title="三.遇到的问题"></a>三.<strong>遇到的问题</strong></h1><h6 id="如果在克隆仓库失败。左下角显示这是一个无效的源路径-URL。可能是由于多个SSH-key造成的问题。可以试试这种方法解决。"><a href="#如果在克隆仓库失败。左下角显示这是一个无效的源路径-URL。可能是由于多个SSH-key造成的问题。可以试试这种方法解决。" class="headerlink" title="如果在克隆仓库失败。左下角显示这是一个无效的源路径/URL。可能是由于多个SSH key造成的问题。可以试试这种方法解决。"></a>如果在克隆仓库失败。左下角显示这是一个无效的源路径/URL。可能是由于多个SSH key造成的问题。可以试试这种方法解决。</h6><p>1.创建SSH key的方法要使用最上面介绍的重命名的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -f ~/.ssh/id_rsa.XXXX -C &quot;邮箱地址&quot;</div></pre></td></tr></table></figure></p>
 <p>2.在~/.ssh 目录下新建一个<code>config</code>文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ touch ~/.ssh/config</div></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/3643442-5e0eaf69a18ab208.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="921511236417_.pic.jpg"></p>
-<p>3.创建完成后打开<code>config</code>文件，添加如下内容（根据自己情况添加）</p>
+<p>3.创建完成后打开<code>config</code>文件</p>
+<ul>
+<li><p>打开<code>config</code>文件所在的文件夹的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd .ssh</div><div class="line">$ open ./</div></pre></td></tr></table></figure>
+</li>
+<li><p>添加如下内容（根据自己情况添加，一般只添加你们gitlab服务器的就行。其他没有问题的不用添加）</p>
+</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># github</div><div class="line">Host github.com</div><div class="line">HostName github.com</div><div class="line">PreferredAuthentications publickey</div><div class="line">IdentityFile ~/.ssh/id_rsa.github</div><div class="line">user git</div></pre></td></tr></table></figure>
 <p><img src="http://upload-images.jianshu.io/upload_images/3643442-2c89bce5befc72d2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="内容模板"></p>
 <p>4.检查下是否正确<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
